@@ -25,7 +25,7 @@ app.use(bodyParser.text({ type: "text/*" }));
 app.use(express.static("public", { extensions: ["html"] }));
 app.use(cors(corsOptions));
 
-app.post("/js", async (req, res) => {
+app.post("/test", async (req, res) => {
   const id = req.body;
   const user = member.find(m => m.uid === id);
   res.append("content-type", "application/json");
