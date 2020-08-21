@@ -1,0 +1,43 @@
+body {
+  font-family: "Lucida Grande";
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #ffff00;
+  color: #000000;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header-list {
+  float: left;
+}
+
+.main {
+  padding: 50px 100px;
+  flex-grow: 1;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #2f5167;
+  color: #fff;
+}
+
+.footer-logo {
+  float: left;
+  font-size: 16px;
+}
