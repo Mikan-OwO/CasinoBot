@@ -14,6 +14,19 @@ app.use(bodyParser.text({ type: "text/*" }));
 app.use(express.static("public", { extensions: ["html"] }));
 app.use(cors(corsOptions));
 
+app.post("/js", async (req, res) => {
+  const id = req.body;
+  const user = member.find(m => m.uid === id);
+  res.append("content-type", "application/json");
+
+  if(user) {
+    const coins = user.coin
+    res.send({ result: String(coins) });
+ } else {
+    res.send({ error: "IDが間違っています" });
+ }
+});
+
 const discord = require('discord.js');
 const client = new discord.Client();
 
