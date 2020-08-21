@@ -6,11 +6,13 @@ body {
 }
 
 .header {
+  font-size: 30px;
   position: fixed;
   top: 0px;
   left: 0px;
+  hight: 50px;
   width: 100%;
-  background-color: #ffff00;
+  background-color: #ff0000;
   color: #000000;
 }
 
