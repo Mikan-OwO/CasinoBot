@@ -2,6 +2,17 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+const discord = require('discord.js');
+const client = new discord.Client();
+
+const cron = require('node-cron');
+const fs = require('fs');
+const { inspect } = require('util');
+const ms = require('ms');
+
+const member = require('./member.json');
+const owners = require('./owner.json');
+
 const app = express();
 const port = process.env.PORT;
 
@@ -26,17 +37,6 @@ app.post("/js", async (req, res) => {
     res.send({ error: "IDが間違っています" });
  }
 });
-
-const discord = require('discord.js');
-const client = new discord.Client();
-
-const cron = require('node-cron');
-const fs = require('fs');
-const { inspect } = require('util');
-const ms = require('ms');
-
-const member = require('./member.json');
-const owners = require('./owner.json');
 
 const commands = [
 	{ name: 'help', value: 'このボットのhelpを表示します。' },
